@@ -1,1 +1,41 @@
 /*Style to Admin's site*/
+* {
+	margin:0;
+}
+body {
+	background-color:#3D3D3D;
+	font-family:Courier New,Verdana,Arial, Helvetica, sans-serif;
+	font-size:15px;
+	margin:auto;
+}
+#wrapper-header {
+	background-color:#777676;
+	height:80px;
+	margin:auto;
+	padding:0;
+	width:100%;
+}
+#wrapper {
+	background-color:#c9c9c9;
+	margin:auto;
+	min-height:400px;
+	min-width:792px;
+	padding:0px;
+	width:80px;
+}
+#wrapper-footer {
+	background-color:#777676;
+	margin:0;
+	min-height:200px;
+	width:100%;
+}
+#footer-content {
+	padding-top:10px;
+	padding-bottom:10px;
+	min-width:792px;
+	width:100%;
+}
+#footer-column {
+	float:left;
+	background-color: #3D3D3D;
+}
