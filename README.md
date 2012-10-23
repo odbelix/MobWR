@@ -1,4 +1,4 @@
 MobWR
 =====
 
-Web application for managing requirements
+Web application for Management Sites
