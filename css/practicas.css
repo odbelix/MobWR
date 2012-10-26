@@ -1,0 +1,89 @@
+/*Style to Admin's site*/
+* {
+	margin:0;
+}
+body {
+	background-color:#3D3D3D;
+	font-family:"Gill Sans MT",Arial, Helvetica, sans-serif;
+	font-size:15px;
+	margin:auto;
+}
+#wrapper {
+	margin:auto;
+	min-height:400px;
+	min-width:900px;
+	padding:0px;
+	padding-bottom:25px;
+	width:900px;
+}
+.wrapper-color {
+	background-color:#ECECEC;
+}
+#wrapper-header {
+	height:125;
+	margin:auto;
+	width:100%;
+}
+#wrapper-menu {
+	height: 35px;
+	margin:auto;
+	width:900px;
+}
+.menu-color {
+	background-color:#8FBF2E;
+	color:white;
+}
+#horizontal-menu {
+	margin:auto;
+	width:80%;
+}
+#horizontal-menu li{
+	color:#FDFDFD;
+	float:left;
+	height:20px;
+	padding: 10px 20px 5px 15px;
+	width:auto;
+}
+#horizontal-menu li:hover{
+	background-color:#29653F;
+	font-weight:bold;
+}
+
+/*Content*/
+#wrapper-content {
+	padding:25px 36px 25px 36px;
+	height:auto;
+	margin:auto;
+	min-height:400px;
+	overflow:auto;
+	width:900px;
+}
+#wrapper-content-column {
+	float:left;
+	width:408px;
+	height:400px;
+}
+.content-color {
+	background-color:#C6C6C5;
+}
+/* Footer */
+#wrapper-footer {
+	height:auto;
+	margin:auto;
+	min-height:150px;
+	overflow:auto;
+	width:828px;
+}
+#wrapper-footer h1 {
+	font-size: 12pt;
+	margin:10px 0px 0px 10px;
+}
+#wrapper-footer li {
+	font-size: 12pt;
+	margin:10px 0px 0px 10px;
+}
+#wrapper-footer .all {
+	float:right;
+	margin:0px 10px 10px 0px;
+	padding:5px;
+}
