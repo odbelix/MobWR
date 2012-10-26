@@ -24,6 +24,23 @@ body {
 	margin:auto;
 	width:100%;
 }
+#wrapper-header .title {
+	font-size:36px;
+	font-weight: bold;
+	font-style:italic;
+	padding-top:40px;
+	padding-left:36px;
+}
+#wrapper-header .sub-title {
+	font-size:15px;
+	font-weight:bold;
+	font-style:italic;
+	padding-left:300px;
+}
+.color-header {
+	color:#000000;
+}
+
 #wrapper-menu {
 	height: 35px;
 	margin:auto;
