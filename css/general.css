@@ -5,11 +5,13 @@
 body {
 	background-color:#3D3D3D;
 	font-family:Courier New,Verdana,Arial, Helvetica, sans-serif;
+	font-family:"Gill Sans","Gill Sans"
 	font-size:15px;
 	margin:auto;
 }
 #wrapper-header {
 	background-color:#777676;
+	border-bottom:#3D3D3D 2px solid;
 	height:80px;
 	margin:auto;
 	padding:0;
