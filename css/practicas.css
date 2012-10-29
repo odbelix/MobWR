@@ -8,6 +8,9 @@ body {
 	font-size:15px;
 	margin:auto;
 }
+.cursos {
+	cursor:pointer;
+}
 #wrapper {
 	margin:auto;
 	min-height:400px;
@@ -22,7 +25,11 @@ body {
 #wrapper-header {
 	height:125;
 	margin:auto;
+	position:relative;
 	width:100%;
+}
+#wrapper-header #column {
+	float:left;
 }
 #wrapper-header .title {
 	font-size:36px;
@@ -37,10 +44,24 @@ body {
 	font-style:italic;
 	padding-left:300px;
 }
+#wrapper-header img{
+	float:right;
+	padding-right: 20px;
+	position:absolute;
+}
+#wrapper-header img.imagen1 {
+	bottom:10px;
+	right: 30px;
+}
+#wrapper-header img.imagen2 {
+	bottom:0;
+	right: 90px;
+}
 .color-header {
 	color:#000000;
 }
 
+/* Menu */
 #wrapper-menu {
 	height: 35px;
 	margin:auto;
@@ -63,7 +84,6 @@ body {
 }
 #horizontal-menu li:hover{
 	background-color:#29653F;
-	font-weight:bold;
 }
 
 /*Content*/
