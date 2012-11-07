@@ -2,6 +2,69 @@
 define('colors','../libphp/colors');
 define('path_menu','../menu/');
 
+function tableFromtable($results,$table,$option=0){
+
+$first = TRUE;
+//table
+$response = '<table>';
+$response.= '<caption>'.$table.'</caption>';
+$response.= '<thead>';
+$response.= '<tr>';
+foreach($results as $new){
+	$keys = (array_keys($new));
+	if ($first == TRUE) {
+		foreach ($keys as $k) { $response.= '<td>'.$k.'</td>';}
+		
+		//Options
+		if ( $option == 1 ){
+			$response.= '<td>Opciones</td>';
+		}
+		$first = FALSE;
+		$response.= '</tr>';
+		$response.= '<tbody>';
+	}
+	$response.= '<tr>';
+	foreach ($keys as $k) {
+		$response.= '<td>'.$new[$k].'</td>';
+	}
+		if ($option == 1 ){
+			$response.= '<td><input type="button" onClick="getNewsForEdit('.$new['id'].')" value="Editar"></td>';
+			$response.= '<td><input type="button" onClick="deleteNews('.$new['id'].')" value="Eliminar"></td>';
+		}
+			
+	$response.= '</tr>';
+}
+$response.= '</tbody>';
+$response.= '</table>';
+	
+	return $response;
+	
+}
+	
+function sqlCreateTable($results,$table){
+	$response = "CREATE TABLE ".strtolower($table)." (";		
+	foreach($results as $row){
+		$keys = (array_keys($row));
+		foreach ($keys as $key) {
+				if ($key == "Field") 
+					$response.= strtolower($row[$key])." ";
+				if ($key == "Type")
+					$response.= strtolower($row[$key])." ";
+				if ($key == "Null")
+					if ($row[$key] == "YES")
+						$response .= " not null";
+				if ($key == "Key")
+					$response.= strtolower($row[$key])." ";
+				if ($key == "Default")
+					$response.= strtolower($row[$key])." ";
+				if ($key == "Extra")
+					$response.= strtolower($row[$key])." ";
+		}
+		$response.=",\n";
+	}
+	$response.= ")";
+	return $response;
+}
 
 /* Function to create pages from menu files*/
 function createPages(){

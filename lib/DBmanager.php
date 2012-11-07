@@ -21,18 +21,20 @@ class DBmanager {
 
 		$rows = array();
 		$result = mysql_query($sql);
+		$result_ex = $result;
 		//$result == true when SQL as INSERT or UPDATE
 		
 		if ($result!==true) {
 			while ($row = mysql_fetch_assoc($result)) {			
 				$rows[] = $row;
 			}
-		//	mysql_free_result($result);			
+			mysql_free_result($result);
+			$result_ex = $rows;			
 		}
 		else {
 			echo mysql_error();
 		}
-		return $rows;		
+		return $result_ex;		
 	}
 	
 }
