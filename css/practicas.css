@@ -91,7 +91,7 @@ body {
 	padding:25px 36px 25px 36px;
 	height:auto;
 	margin:auto;
-	min-height:400px;
+	min-height:440px;
 	overflow:auto;
 	width:900px;
 }
@@ -100,10 +100,89 @@ body {
 	width:408px;
 	height:400px;
 }
+/*For 2 colums same size*/
+#wrapper-content-column-1 {
+	float:left;
+	width:402px;
+	height:400px;
+}
+#wrapper-content-column-2 {
+	float:left;
+	height:400px;
+	margin-left:12px;
+	width:402px;
+}
+
+/*3 Colums - Session start*/
+#wrapper-content-column-left {
+	float:left;
+	width:222px;
+	height:400px;
+}
+#wrapper-content-column-mid {
+	float:left;
+	height:400px;
+	margin-left:12px;
+	width:412px;
+	overflow: auto;
+}
+#wrapper-content-column-right {
+	float:left;
+	height:400px;
+	margin-left:12px;
+	width:170px;
+	
+}
 .content-color {
 	background-color:#C6C6C5;
 }
-/* Footer */
+.lgreen{
+	background-color:#8FBF2E;
+}
+.dgreen {
+	background-color:#29653F;
+}
+.column-title {
+	color:white;
+	height:52px;
+	text-align:center;
+	width:100%;
+}
+.column-title .text {
+	padding-top:15px;
+}
+
+/*Menu right colums - menu vertical right*/
+#menu-vertical-right {
+	background-color:#8FBF2E;
+	color:white;
+	height:52px;
+	cursor:pointer;
+	text-align:center;
+	width:100%;
+}
+#menu-vertical-right:hover {
+	background-color:#29653F;
+}
+#menu-vertical-right .text {
+	padding-top:15px;
+}
+.margin-top-menu-vertical {
+	margin-top:10px;
+}
+#wrapper-content-column-right .info-practice {
+	height:245;	
+}
+/*Session content*/
+#session-content {
+	height:195;
+	width:100%px;
+}
+#session-content h1 {
+	font-size:8px;
+}
+
+/* Footer - this case News*/
 #wrapper-footer {
 	height:auto;
 	margin:auto;

@@ -118,6 +118,25 @@ function checkSessionValue($name){
         else
                 return 0;        
 }
+function checkSessionRoles(){
+	//Check ROLE		
+	if (is_array($_SESSION['role'])){
+		
+		$response = '<select name"role">';
+		foreach ($_SESSION['role'] as $key => $value) {
+			$response .= '<option value="'.$key.'">'.$value.'</option>';
+		}
+		$response.= '</select>';
+		return $response;
+	}
+	else {
+		return $_SESSION['role'];
+	}
+}
+function destroySession(){
+	session_destroy();
+}
+
 
 //Send mail
 function sendmail($user, $subject, $message, $header){
