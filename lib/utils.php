@@ -2,11 +2,47 @@
 define('colors','../libphp/colors');
 define('path_menu','../menu/');
 
-function tableFromtable($results,$table,$option=0){
+//Create Form.
+function createForm($action=null,$id=null,$fields=null,$function=null){
+
+	if ($action != null && $id != null and $fields != null and $function != NULL){
+		
+		$response = '<form action="'.$action.'" id="'.$id.'" name="'.$id.'">';
+		$response .= '<table>';
+		foreach($fields as $key => $value) {
+			
+			$response .= '<tr>';
+			$response .= '<td>';
+			$response .= ucfirst($key);
+			$response .= '</td>';
+			$response .= '<td>';
+			$response .= '<input type="'.$value.'" name="'.$key.'" value="">';
+			$response .= '</td>';
+			$response .= '</tr>';		
+		}
+		//Button
+		$response .= '<tr>';
+		$response .= '<td colspan="2">';
+		$response .= '<input onClick="'.$function.'" type="button" value="Guardar">';
+		$response .= '</td>';
+		$response .= '</tr>';
+			
+		//Close	 
+		$response .= '</table>';
+		$response .= '</form>';
+		return $response;
+	}
+	else {
+		return "PROBLEM!-Check Parameters";
+	}
+}
+
+
+function tableFromtable($results,$table,$option=0,$class=""){
 
 $first = TRUE;
 //table
-$response = '<table>';
+$response = '<table class="'.$class.'">';
 $response.= '<caption>'.$table.'</caption>';
 $response.= '<thead>';
 $response.= '<tr>';
@@ -86,6 +122,9 @@ function createPages(){
             closedir($handle);
         }
 }
+
+
+/* Sessions*/
 function getParameter($id){
     if (array_key_exists($id,$_GET))
         return $_GET[$id];

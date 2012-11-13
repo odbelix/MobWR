@@ -92,7 +92,7 @@ body {
 	height:auto;
 	margin:auto;
 	min-height:440px;
-	overflow:auto;
+	/*overflow:auto;*/
 	width:900px;
 }
 #wrapper-content-column {
@@ -112,7 +112,17 @@ body {
 	margin-left:12px;
 	width:402px;
 }
-
+.wrapper-content-column-2b {
+	float:left;
+	height:auto;
+	min-height:400px;
+	margin-left:12px;
+	font-size:10px;
+	width:588px;
+}
+.news {
+	font-size:10px;
+}
 /*3 Colums - Session start*/
 #wrapper-content-column-left {
 	float:left;

@@ -7,7 +7,7 @@ $db = new DBmanager();
 $query = "SELECT * FROM noticia ORDER BY id DESC";
 $results = $db->execute($query);
 
-echo tableFromtable($results,"noticia",1);
+echo tableFromtable($results,"noticia",1,'news');
 
 
 ?>

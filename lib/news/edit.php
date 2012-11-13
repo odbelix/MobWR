@@ -1,6 +1,13 @@
 <?php
 include($_SERVER['DOCUMENT_ROOT']."MobWR"."/lib/config.php");
 
+
+define("all","lib/news/all.php");
+define("addedit","lib/news/add-edit.php");
+define("get","lib/news/getNews.php");
+define("delete","lib/news/delete.php");
+
+
 $tiny_mce = "../../js/tiny_mce/tiny_mce.js";
 $jquery = "../../js/jquery-1.8.2.min.js"; 
 ?>
@@ -17,12 +24,12 @@ $jquery = "../../js/jquery-1.8.2.min.js";
 function addEditNew(){
 	tinyMCE.triggerSave();	
 	var form = $('#newsform');
-	alert(form.serialize());
 	$.ajax({
                 url:form.attr('action'),
                 type:'post',
 				data: form.serialize(),
                 success:function(output){
+                		alert(output);
 						$("#newsresult").html(output);
 						listNews();
                 }
@@ -30,7 +37,7 @@ function addEditNew(){
 }
 function getNewsForEdit(id){
 	$.ajax({
-                url:'getNews.php',
+                url:'<?=get?>',
                 type:'post',
 				data: 'id='+id,
 				dataType:'json',
@@ -56,7 +63,7 @@ function getNewsForEdit(id){
 function deleteNews(id){
 	if(confirm("Esta seguro que desea eliminar esta noticia?")){
 		$.ajax({
-        	        url:'delete.php',
+        	        url:'<?=delete?>',
             	    type:'post',
 					data: 'id='+id,
                 	success:function(output){
@@ -68,7 +75,7 @@ function deleteNews(id){
 }
 function listNews(){
 		$.ajax({
-        	        url:'all.php',
+        	        url:'<?=all?>',
             	    type:'post',
                 	success:function(output){
                 		$("#list-news").html(output);
@@ -76,12 +83,17 @@ function listNews(){
 		})
 }
 listNews();
+$("#newsform").hide();
+function showaction(){
+	$("#newsform").show();	
+}
 </script>
 <div id="add-edit-new">
 	<!-- Display response of action -->
+	<div onclick="showaction();">Agregar noticia</div>
 	<div id="newsresult"></div>
 	<!-- Form to Add or Edit -->
-	<form id="newsform" action="add-edit.php">
+	<form id="newsform" action="<?=addedit?>">
 	<h1>Noticias</h1>
 	<!-- Gets replaced with TinyMCE, remember HTML in a textarea should be encoded -->
 	<input id="titulo" name="titulo" placeholder="Titulo" type="text" value="">
