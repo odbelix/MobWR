@@ -24,6 +24,10 @@ class DBmanager {
 		$result_ex = $result;
 		//$result == true when SQL as INSERT or UPDATE
 		
+		if (mysql_errno()==1146){
+			echo "Table does not exist";
+		}
+		
 		if ($result!==true) {
 			while ($row = mysql_fetch_assoc($result)) {			
 				$rows[] = $row;
