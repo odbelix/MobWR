@@ -1,6 +1,22 @@
 <?php
 define('colors','../libphp/colors');
 define('path_menu','../menu/');
+define('namesite','MobWR/');
+
+//Gallery random
+function GalleryChange(){
+	$imagen = rand(1,19);
+	echo '<img src="gallery/'.$imagen.'.jpg" width="405px" height="195px"/>'; 
+}
+
+
+//my path
+function getPath($file){
+	$root = $_SERVER['DOCUMENT_ROOT'].namesite;
+	$clear = "";
+	$response = str_replace($root,$clear,$file);
+	return $response;
+}
 
 //Create Form.
 function createForm($action=null,$id=null,$fields=null,$function=null){
@@ -35,6 +51,44 @@ function createForm($action=null,$id=null,$fields=null,$function=null){
 	else {
 		return "PROBLEM!-Check Parameters";
 	}
+}
+
+function createTable($results,$table,$option=0,$class="",$action=""){
+
+$first = TRUE;
+//table
+$response = '<table class="'.$class.'">';
+$response.= '<caption>'.$table.'</caption>';
+$response.= '<thead>';
+$response.= '<tr>';
+foreach($results as $new){
+	$keys = (array_keys($new));
+	if ($first == TRUE) {
+		foreach ($keys as $k) { $response.= '<td>'.strtoupper($k).'</td>';}
+		
+		//Options
+		if ( $option == 1 ){
+			$response.= '<td>Opciones</td>';
+		}
+		$first = FALSE;
+		$response.= '</tr>';
+		$response.= '<tbody>';
+	}
+	$response.= '<tr>';
+	foreach ($keys as $k) {
+		$response.= '<td>'.$new[$k].'</td>';
+	}
+		if ($option == 1 ){
+			$response.= '<td><input type="button" onClick="'.$action.'('.$new['id'].')" value="Editar"></td>';
+		}
+			
+	$response.= '</tr>';
+}
+$response.= '</tbody>';
+$response.= '</table>';
+	
+	return $response;
+	
 }
 
 

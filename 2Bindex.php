@@ -1,3 +1,6 @@
+<?php
+include_once("lib/utils.php");
+?>
 <html>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <head>
@@ -9,7 +12,13 @@
 <script type="text/javascript">
 $(document).ready(function(){
 	$("#menu-admin li").click(function(){
-		$("#content").load('lib/news/edit.php');
+		if (this.id == "1"){
+			$("#content").load('lib/news/edit.php');	
+		}
+		if (this.id == "2"){
+			$("#content").load('lib/dfiles/edit_file.php');
+		}
+		
 	});
 });
 </script>
@@ -35,25 +44,28 @@ $(document).ready(function(){
 			</ul>
 		</div>
 	</div>
-	<div id="wrapper-content">
+	<div class="wrapper-content">
 		<div id="wrapper-content-column-left" class="content-color">
 			<div class="menu-color"><div class="text">Menú</div></div>
 			<ul id="menu-admin">
 				<li id="1">Noticias</li>
+				<li id="2">Reglamentos</li>
+				<li id="3">Mensajes</li>					
+			</ul>
+			<div class="menu-color"><div class="text">Reportes</div></div>
+			<ul id="menu-admin-reports">
+				<li id="1" >Empresas</li>
+				<li id="2" >Alumnos</li>
+				<li id="3" >Practicas</li>					
 			</ul>
 		</div>
 		<div id="content" class="wrapper-content-column-2b content-color">
+		<?php 
+		GalleryChange();
+		?>
 		</div>
+		<br style="clear: both" />
 	</div><!-- End Wrapper-content -->
-	<div id="wrapper-footer" class="content-color">
-		<h1>Noticias</h1>
-			<ul>
-				<li>Última noticia actualizada .... <span class="cursos ">leer más</span></li>
-				<li>Última noticia actualizada .... leer más</li>
-				<li>Última noticia actualizada .... leer más</li>
-			</ul>
-		<div class="all menu-color">Leer más</div>
-	</div>
 </div>
 </body>
 </html>

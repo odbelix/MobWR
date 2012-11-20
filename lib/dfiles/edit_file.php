@@ -1,6 +1,6 @@
 <?php
-include($_SERVER['DOCUMENT_ROOT']."MobWR"."/lib/config.php");
-include("../utils.php");
+include("lib/config.php");
+include("lib/utils.php");
 
 $db = new DBmanager();
 

@@ -15,6 +15,7 @@ body {
 	margin:auto;
 	min-height:400px;
 	min-width:900px;
+	height:auto;
 	padding:0px;
 	padding-bottom:25px;
 	width:900px;
@@ -79,6 +80,7 @@ body {
 	color:#FDFDFD;
 	float:left;
 	height:20px;
+	list-style:none;
 	padding: 10px 20px 5px 15px;
 	width:auto;
 }
@@ -87,6 +89,14 @@ body {
 }
 
 /*Content*/
+.wrapper-content {
+	padding:25px 36px 25px 36px;
+	height:auto;
+	margin:auto;
+	min-height:440px;
+	width:900px;
+}
+
 #wrapper-content {
 	padding:25px 36px 25px 36px;
 	height:auto;
