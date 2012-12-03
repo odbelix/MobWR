@@ -1,7 +1,12 @@
+<?php
+include_once("lib/utils.php");
+?>
+
 <html>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <head>
-<link rel="stylesheet" type="text/css" href="css/practicas.css">
+<link rel="stylesheet" type="text/css" href="css/practicas_general.css">
+<link rel="stylesheet" type="text/css" href="css/practicas_colors.css">
 <title>Practicas</title>
 </head>
 <body>
@@ -26,24 +31,24 @@
 		</div>
 	</div>
 	<div id="wrapper-content">
-		<div id="wrapper-content-column-left">
-			<!-- Session-->
-			<div id="session-content">
-				
+		<div id="wrapper-content-column-1">
+			<?=GalleryChange()?>
+			<!-- -->
+			<div class="mini-column dialog-color">
+				<div class="presentation">
+					No se puede encontrar el servidor de www.google.cl porque se ha producido un error en la búsqueda de DNS. 		
+				</div>
+			</div>
+			<div class="mini-column lgreen">
+				<!-- Session start-->
+				<div >
+					<table></table>
+				</div>
+				<!-- End Session start-->
 			</div>
 		</div>
-		<div id="wrapper-content-column-mid" class="content-color">
-			<ul>
-				<li>LI</li>
-				<li>LI</li>
-				<li>LI</li>
-				<li>LI</li>
-				<li>LI</li>
-				<li>LI</li>
-			</ul>
-			
-		</div>
-		<div id="wrapper-content-column-right">
+		<div id="wrapper-content-column-2" class="content-color">
+			<div class="column-title dgreen"><div class="text">Pŕactica Profesional</div></div>
 		</div>
 	</div><!-- End Wrapper-content -->
 	<div id="wrapper-footer" class="content-color">

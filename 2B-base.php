@@ -4,7 +4,8 @@ include_once("lib/utils.php");
 <html>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <head>
-<link rel="stylesheet" type="text/css" href="css/practicas.css">
+<link rel="stylesheet" type="text/css" href="css/practicas_general.css">
+<link rel="stylesheet" type="text/css" href="css/practicas_colors.css">
 <title>Practicas</title>
 <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
 <script type="text/javascript" src="js/tiny_mce/tiny_mce_src.js"></script>

@@ -1,7 +1,8 @@
 <html>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <head>
-<link rel="stylesheet" type="text/css" href="css/practicas.css">
+<link rel="stylesheet" type="text/css" href="css/practicas_general.css">
+<link rel="stylesheet" type="text/css" href="css/practicas_colors.css">
 <title>Practicas</title>
 </head>
 <body>
@@ -26,14 +27,26 @@
 		</div>
 	</div>
 	<div id="wrapper-content">
-		<div id="wrapper-content-column-1" class="content-color">
-			<div class="column-title dgreen"><div class="text">Pŕactica Obrera</div></div>
+		<div id="wrapper-content-column-left">
+			<!-- Session-->
+			<div id="session-content" class="content-color">
+				<h1>Datos alumnos</h1>
+			</div>
+		</div>
+		<div id="wrapper-content-column-mid" class="content-color">
+			<table class="table-content">
+				<thead><tr><td>Texto titulo</td></tr></thead>
+				<tbody><tr><td>Texto titulo Texto titulo Texto titulo Texto titulo</td></tr></tbody>
+			</table>
 			
 		</div>
-		<div id="wrapper-content-column-2" class="content-color">
-			<div class="column-title dgreen"><div class="text">Pŕactica Profesional</div></div>
+		<div id="wrapper-content-column-right">
+			<div  id="menu-vertical-right"><div class="text">Autoevaluación</div></div>
+			<div  id="menu-vertical-right" class="margin-top-menu-vertical"><div class="text">Inscribir práctica</div></div>
+			<div  class="info-practice content-color margin-top-menu-vertical"><div class="text">Inscribir práctica</div></div>
+			<div  id="menu-vertical-right" class="margin-top-menu-vertical"><div class="text">Postular práctica</div></div>
 		</div>
-	</div><!-- End Wrapper-content -->
+	</div>
 	<div id="wrapper-footer" class="content-color">
 		<h1>Noticias</h1>
 			<ul>
