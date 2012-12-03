@@ -6,10 +6,8 @@ define('namesite','MobWR/');
 //Gallery random
 function GalleryChange(){
 	$imagen = rand(1,19);
-	echo '<img src="gallery/'.$imagen.'.jpg" width="405px" height="195px"/>'; 
+	return '<img src="gallery/'.$imagen.'.jpg" width="405px" height="195px"/>'; 
 }
-
-
 //my path
 function getPath($file){
 	$root = $_SERVER['DOCUMENT_ROOT'].namesite;
