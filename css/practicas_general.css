@@ -8,7 +8,7 @@ body { background-color:#3D3D3D; font-family:"Gill Sans MT",Arial, Helvetica, sa
 #wrapper { height:auto; margin:auto; min-height:400px; min-width:900px; padding:0px; padding-bottom:25px; width:900px;}
 
 /*Header - Banner*/
-#wrapper-header { height:125; margin:auto; position:relative; width:100%; }
+#wrapper-header { height:125px; margin:auto; position:relative; width:100%; }
 #wrapper-header #column { float:left; }
 #wrapper-header .title { font-size:36px;  font-weight: bold;  font-style:italic; padding-top:40px; padding-left:36px; }
 #wrapper-header .sub-title { font-size:15px; font-weight:bold; font-style:italic; padding-left:300px; }
@@ -40,7 +40,7 @@ body { background-color:#3D3D3D; font-family:"Gill Sans MT",Arial, Helvetica, sa
 
 
 .column-enterprise { margin:auto; padding:5px; text-align:center;}
-.enterprise { border:white solid 1px; height:50px; margin:5; padding:5px; text-align:center; width:360px; }
+.enterprise { border:white solid 1px; height:50px; margin:5px; padding:5px; text-align:center; width:360px; }
 
 /* Presentation and buttons */
 #wrapper-content-column-1 .mini-column {float:left; height:195px; margin:10px 0px 0px 5px; width:195px; }
@@ -50,6 +50,7 @@ body { background-color:#3D3D3D; font-family:"Gill Sans MT",Arial, Helvetica, sa
 /*3 Colums - Session start*/
 #wrapper-content-column-left { float:left; width:222px; height:435px; }
 #wrapper-content-column-mid { float:left; height:435px; margin-left:12px; width:412px; overflow: auto; }
+#wrapper-content-column-mid #content-mid { height:370px; margin-top:62px; width:100%; }
 #wrapper-content-column-right { float:left; height:435px; margin-left:12px; width:170px; }
 
 /* Tables*/
@@ -111,30 +112,21 @@ body { background-color:#3D3D3D; font-family:"Gill Sans MT",Arial, Helvetica, sa
 }
 
 /*Menu right colums - menu vertical right*/
-#menu-vertical-right {
-	background-color:#8FBF2E;
-	color:white;
-	height:52px;
-	cursor:pointer;
-	text-align:center;
-	width:100%;
-}
-#menu-vertical-right:hover {
-	background-color:#29653F;
-}
-#menu-vertical-right .text {
-	padding-top:15px;
-}
-.margin-top-menu-vertical {
-	margin-top:10px;
-}
+#menu-vertical-right { background-color:#8FBF2E; color:white; cursor:pointer; height:52px; text-align:center; width:100%; }
+.horizontal { float:left; height:52px; width:200px;}
+.margin-left-menu-horizontal {margin-left:12px; }
+#menu-vertical-right:hover { background-color:#29653F; }
+#menu-vertical-right .text { padding-top:15px; }
+.margin-top-menu-vertical { margin-top:10px; }
+
+
 #wrapper-content-column-right .info-practice {
-	height:245;	
+	height:245px;	
 }
 /*Session content*/
 #session-content {
-	height:195;
-	width:100%px;
+	height:195px;
+	width:100%;
 }
 #session-content h1 {
 	font-size:8px;

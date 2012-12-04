@@ -1,6 +1,5 @@
 <?php
-include_once("lib/utils.php");
-include_once("lib/dblib.php");
+include_once("lib/config.php");
 ?>
 
 <html>

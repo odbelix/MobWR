@@ -33,12 +33,15 @@
 				<h1>Datos alumnos</h1>
 			</div>
 		</div>
-		<div id="wrapper-content-column-mid" class="content-color">
-			<table class="table-content">
-				<thead><tr><td>Texto titulo</td></tr></thead>
-				<tbody><tr><td>Texto titulo Texto titulo Texto titulo Texto titulo</td></tr></tbody>
-			</table>
-			
+		<div id="wrapper-content-column-mid" >
+			<div class="horizontal"><div  id="menu-vertical-right"><div class="text">Lista Prácticas Obreras</div></div></div>
+			<div class="horizontal margin-left-menu-horizontal"><div  id="menu-vertical-right"><div class="text">Lista Prácticas Profesionales</div></div></div>
+			<div id="content-mid" class="content-color">
+				<table class="table-content">
+					<thead><tr><td>Texto titulo</td></tr></thead>
+					<tbody><tr><td>Texto titulo Texto titulo Texto titulo Texto titulo</td></tr></tbody>
+				</table>
+			</div>
 		</div>
 		<div id="wrapper-content-column-right">
 			<div  id="menu-vertical-right"><div class="text">Autoevaluación</div></div>
