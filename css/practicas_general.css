@@ -52,13 +52,14 @@ body { background-color:#3D3D3D; font-family:"Gill Sans MT",Arial, Helvetica, sa
 #wrapper-content-column-mid { float:left; height:435px; margin-left:12px; width:412px; overflow: auto; }
 #wrapper-content-column-mid #content-mid { height:370px; margin-top:62px; width:100%; }
 #wrapper-content-column-right { float:left; height:435px; margin-left:12px; width:170px; }
+#wrapper-content-column-right .info-practice { height:245px; }
 
 /* Tables*/
 .table-content { color:#3D3D3D; font-size:smaller; width:390px; margin:auto; min-height:300px;}
 .table-content .first-column {width:100px;}
 
 
-
+/* Title for subscribe */
 .column-title-one { color:white; height:52px; float:left; text-align:center; width:205px; }
 .column-title-two { color:white; height:52px; float:left; margin-left:2px; text-align:center; width:205px; }
 .column-title-one .text { padding-top:15px;}
@@ -69,38 +70,17 @@ body { background-color:#3D3D3D; font-family:"Gill Sans MT",Arial, Helvetica, sa
 
 
 
+/* Column for admin */
+.wrapper-content-column-2b { float:left; height:auto; min-height:400px; margin-left:12px; font-size:10px; width:588px; }
+.news { font-size:10px; }
+
+/*Colors*/ 
+.content-color { background-color:#C6C6C5; }
+.lgreen{ background-color:#8FBF2E; }
+.dgreen { background-color:#29653F; }
 
 
 
-
-
-
-
-
-.wrapper-content-column-2b {
-	float:left;
-	height:auto;
-	min-height:400px;
-	margin-left:12px;
-	font-size:10px;
-	width:588px;
-}
-.news {
-	font-size:10px;
-}
-
-
-
-
-.content-color {
-	background-color:#C6C6C5;
-}
-.lgreen{
-	background-color:#8FBF2E;
-}
-.dgreen {
-	background-color:#29653F;
-}
 .column-title {
 	color:white;
 	height:52px;
@@ -120,17 +100,11 @@ body { background-color:#3D3D3D; font-family:"Gill Sans MT",Arial, Helvetica, sa
 .margin-top-menu-vertical { margin-top:10px; }
 
 
-#wrapper-content-column-right .info-practice {
-	height:245px;	
-}
+
+
 /*Session content*/
-#session-content {
-	height:195px;
-	width:100%;
-}
-#session-content h1 {
-	font-size:8px;
-}
+#session-content { height:195px; width:100%; }
+#session-content h1 { font-size:8px; }
 
 
 /* Footer - this case News*/

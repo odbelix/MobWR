@@ -1,5 +1,5 @@
 <?php
-include_once("lib/utils.php");
+include_once("lib/config.php");
 ?>
 <html>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -62,7 +62,7 @@ $(document).ready(function(){
 		</div>
 		<div id="content" class="wrapper-content-column-2b content-color">
 		<?php 
-		GalleryChange();
+		echo GalleryChange();
 		?>
 		</div>
 		<br style="clear: both" />
