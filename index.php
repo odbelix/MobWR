@@ -8,52 +8,8 @@ include_once("lib/config.php");
 <link rel="stylesheet" type="text/css" href="css/practicas_general.css">
 <link rel="stylesheet" type="text/css" href="css/practicas_colors.css">
 <title>Practicas</title>
-<script src="js/jquery-1.8.2.min.js"></script>
-<script language="JavaScript">
-$(document).ready(function(){
-	$("#horizontal-menu li").click(function(){
-		if(this.id == "1"){
-			location.reload();
-		}
-		if(this.id == "2"){
-			$("#wrapper-content").load("static/tipo.php");
-		}
-		if(this.id == "3"){
-			$("#wrapper-content").load("static/colaboradores.php");
-		}
-		if(this.id == "4"){
-			$("#wrapper-content").load("static/inscribete.php");
-		}
-		if(this.id == "5"){
-			$("#wrapper-content").load("static/contacto.html");
-		}
-		$('#horizontal-menu li').each(function(index) {
-   			 $(this).attr('class','');			 
-		});
-		$(this).attr('class','');
-		$(this).addClass('selected'); 
-	});
-});
-function navegar(id){
-	var menu = $("#"+id);
-	if (menu.hasClass('lgreen')){
-		menu.removeClass('lgreen');
-		menu.addClass('selected');	
-	}
-	else {
-		menu.removeClass('selected');
-		menu.addClass('lgreen');	
-	}
-	if(menu.attr('id') == 'title-one'){
-		$("#title-two").removeClass('selected');
-		$("#title-two").addClass('lgreen');
-	}
-	else {
-		$("#title-one").removeClass('selected');
-		$("#title-one").addClass('lgreen');
-	}
-}
-</script>
+<script src="js/jquery-1.8.2.min.js" type="text/javascript"></script>
+<script src="js/surf.js" type="text/javascript"></script>
 </head>
 <body>
 <div id="wrapper" class="wrapper-color">
