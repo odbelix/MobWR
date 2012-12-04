@@ -1,5 +1,6 @@
 <?php
 include_once("lib/utils.php");
+include_once("lib/dblib.php");
 ?>
 
 <html>
@@ -8,6 +9,52 @@ include_once("lib/utils.php");
 <link rel="stylesheet" type="text/css" href="css/practicas_general.css">
 <link rel="stylesheet" type="text/css" href="css/practicas_colors.css">
 <title>Practicas</title>
+<script src="js/jquery-1.8.2.min.js"></script>
+<script language="JavaScript">
+$(document).ready(function(){
+	$("#horizontal-menu li").click(function(){
+		if(this.id == "1"){
+			location.reload();
+		}
+		if(this.id == "2"){
+			$("#wrapper-content").load("static/tipo.php");
+		}
+		if(this.id == "3"){
+			$("#wrapper-content").load("static/colaboradores.php");
+		}
+		if(this.id == "4"){
+			$("#wrapper-content").load("static/inscribete.php");
+		}
+		if(this.id == "5"){
+			$("#wrapper-content").load("static/contacto.html");
+		}
+		$('#horizontal-menu li').each(function(index) {
+   			 $(this).attr('class','');			 
+		});
+		$(this).attr('class','');
+		$(this).addClass('selected'); 
+	});
+});
+function navegar(id){
+	var menu = $("#"+id);
+	if (menu.hasClass('lgreen')){
+		menu.removeClass('lgreen');
+		menu.addClass('selected');	
+	}
+	else {
+		menu.removeClass('selected');
+		menu.addClass('lgreen');	
+	}
+	if(menu.attr('id') == 'title-one'){
+		$("#title-two").removeClass('selected');
+		$("#title-two").addClass('lgreen');
+	}
+	else {
+		$("#title-one").removeClass('selected');
+		$("#title-one").addClass('lgreen');
+	}
+}
+</script>
 </head>
 <body>
 <div id="wrapper" class="wrapper-color">
@@ -22,11 +69,11 @@ include_once("lib/utils.php");
 	<div id="wrapper-menu" class="menu-color">
 		<div id="horizontal-menu">
 			<ul>
-				<li>Inicio</li>
-				<li>Tipos de prácticas</li>
-				<li>Red de colaboradores</li>
-				<li>Inscribete</li>
-				<li>Contacto</li>
+				<li id="1">Inicio</li>
+				<li id="2">Tipos de prácticas</li>
+				<li id="3">Red de colaboradores</li>
+				<li id="4">Inscribete</li>
+				<li id="5">Contacto</li>
 			</ul>
 		</div>
 	</div>

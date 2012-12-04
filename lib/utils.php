@@ -3,6 +3,8 @@ define('colors','../libphp/colors');
 define('path_menu','../menu/');
 define('namesite','MobWR/');
 
+
+
 //Gallery random
 function GalleryChange(){
 	$imagen = rand(1,19);

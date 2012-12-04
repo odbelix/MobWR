@@ -36,10 +36,22 @@ function updateRecords($field="*",$table=null,$where=null){
 	if ($table != null && $where != null){
 		$query = "UPDATE ".$table." SET ".$field." WHERE ".$where;
 		global $db;
-		return $db->exceute($query);
+		return $db->execute($query);
 	}
 	else {
 		return 0;
 	}
 }
+
+function getMessage($id){
+	$query = "SELECT descripcion FROM mensaje WHERE id =".$id;
+	global $db;
+	$result = $db->execute($query);
+	$response = '';
+	foreach($result as $men){
+		$response = $men['descripcion'];
+	}
+	return $response;
+}
+
 ?>
