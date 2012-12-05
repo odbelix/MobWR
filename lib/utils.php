@@ -5,6 +5,20 @@ define('namesite','MobWR/');
 
 
 
+function deleteImage($action="",$alt=""){
+	$response = '<img src="images/document-delete.png" width="24px" height="24px"';
+	$response .= 'onClick="'.$action.'" alt="'.$alt.'" >'; 
+	return $response;
+}
+
+function editImage($action="",$alt=""){
+	$response = '<img src="images/document-edit.png" width="24px" height="24px" ';
+	$response .= 'onClick="'.$action.'" alt="'.$alt.'">'; 
+	return $response;
+}
+
+
+
 //Gallery random
 function GalleryChange(){
 	$imagen = rand(1,19);
@@ -118,8 +132,11 @@ foreach($results as $new){
 		$response.= '<td>'.$new[$k].'</td>';
 	}
 		if ($option == 1 ){
-			$response.= '<td><input type="button" onClick="getNewsForEdit('.$new['id'].')" value="Editar"></td>';
-			$response.= '<td><input type="button" onClick="deleteNews('.$new['id'].')" value="Eliminar"></td>';
+			$response.= '<td>';
+			$response.= editImage('getNewsForEdit('.$new['id'].')','Editar recurso');
+			$response.= deleteImage('deleteNews('.$new['id'].')','Eliminar recurso');
+			//<input type="button" onClick="getNewsForEdit('.$new['id'].')" value="Editar"><br>';
+			//$response.= '<input type="button" onClick="deleteNews('.$new['id'].')" value="Eliminar"></td>';
 		}
 			
 	$response.= '</tr>';

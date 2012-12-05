@@ -4,10 +4,9 @@ define("pass","Contraseña");
 define("title","Log in");
 define("button","Ingresar");
 header('content-type: text/html; charset: utf-8');
-
-$jquery = "../js/jquery-1.8.2.min.js"; 
+ 
 ?>
-<script type="text/javascript" src="<?=$jquery?>"></script>
+
 <script type="text/javascript">
 function checkuser(){
 	var form = $("#loginform");
@@ -21,16 +20,17 @@ function checkuser(){
 				$("#loginresult").html(output);	
 			}
 			else {
-				alert("Correct User");
+				//alert("Correct User");
+				window.location = "3B-base.php";
 			}
 		}
 	});
 }
 </script>
 <div>
-	<form action="login/check-user.php" id="loginform">
+	<form action="lib/login/check-user.php" id="loginform">
 	<div id="loginresult"></div>
-	<table>
+	<table class="table-login">
 		<thead>
 			<tr>
 				<td colspan="2"><?=title?></td>

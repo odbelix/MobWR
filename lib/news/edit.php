@@ -10,9 +10,10 @@ define("delete","lib/news/delete.php");
 
 $tiny_mce = "../../js/tiny_mce/tiny_mce.js";
 $jquery = "../../js/jquery-1.8.2.min.js"; 
+
+/*<script type="text/javascript" src="<?=$tiny_mce?>"></script>
+//<script type="text/javascript" src="<?=$jquery?>"></script> */
 ?>
-<script type="text/javascript" src="<?=$tiny_mce?>"></script>
-<script type="text/javascript" src="<?=$jquery?>"></script>
 <script type="text/javascript">
 	tinyMCE.init({
 		mode : "textareas",
@@ -55,7 +56,7 @@ function getNewsForEdit(id){
 							tinyMCE.activeEditor.setContent(e.cuerpo);
 							$($('#tipo  option').get(e.tipo-1)).attr('selected', 'selected');
 							//$('#tipo option:eq('++')').attr('selected', 'selected');
-
+							$("#newsform").show();
 						});
                 }
     });

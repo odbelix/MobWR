@@ -43,9 +43,7 @@ include_once("lib/config.php");
 			</div>
 			<div class="mini-column lgreen">
 				<!-- Session start-->
-				<div >
-					<table></table>
-				</div>
+				<?include("lib/login/view.php")?>
 				<!-- End Session start-->
 			</div>
 		</div>

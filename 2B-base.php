@@ -18,10 +18,23 @@ $(document).ready(function(){
 		}
 		if (this.id == "2"){
 			$("#content").load('lib/dfiles/edit_file.php');
-		}
-		
+		}		
+	});
+	
+	var list_menu = ['menu-admin','menu-admin-practice','menu-admin-records','menu-admin-reports'];
+	$.each(list_menu,function(index, value){
+		$("#"+value).hide();	
 	});
 });
+function viewhide(id){
+	var list = $("#"+id);
+	if (list.is(':visible')){
+		list.slideUp();	
+	}
+	else {
+		list.slideDown();
+	}
+}
 </script>
 </head>
 <body>
@@ -47,13 +60,28 @@ $(document).ready(function(){
 	</div>
 	<div class="wrapper-content">
 		<div id="wrapper-content-column-left" class="content-color">
-			<div class="menu-color"><div class="text">Menú</div></div>
+			<div class="menu-vertical-right-admin lgreen" onclick="viewhide('menu-admin')"><div class="text">Administración</div></div>
 			<ul id="menu-admin">
 				<li id="1">Noticias</li>
 				<li id="2">Reglamentos</li>
 				<li id="3">Mensajes</li>					
 			</ul>
-			<div class="menu-color"><div class="text">Reportes</div></div>
+			<br>
+			<div class="menu-vertical-right-admin lgreen" onclick="viewhide('menu-admin-practice')"><div class="text">Gestión prácticas</div></div>
+			<ul id="menu-admin-practice">
+				<li id="1" >Ver prácticas</li>
+				<li id="2" >Notificación proceso evaluación</li>
+				<li id="3" >Evaluación Final</li>					
+			</ul>
+			<br>
+			<div class="menu-vertical-right-admin lgreen" onclick="viewhide('menu-admin-records')"><div class="text">Registros</div></div>
+			<ul id="menu-admin-records">
+				<li id="1" >Alumnos</li>
+				<li id="2" >Empresas</li>
+				<li id="3" >Practicas</li>					
+			</ul>
+			<br>
+			<div class="menu-vertical-right-admin lgreen" onclick="viewhide('menu-admin-reports')"><div class="text">Reportes</div></div>
 			<ul id="menu-admin-reports">
 				<li id="1" >Empresas</li>
 				<li id="2" >Alumnos</li>
