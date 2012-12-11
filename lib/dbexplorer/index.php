@@ -1,7 +1,5 @@
 <?php
-include("../utils.php");
 include("../config.php");
-include("../dblib.php");
 
 $db = new DBmanager();
 

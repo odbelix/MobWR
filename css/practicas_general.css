@@ -66,6 +66,8 @@ body { background-color:#3D3D3D; font-family:"Gill Sans MT",Arial, Helvetica, sa
 .table-login input[type=text] {width: 100px;}
 .table-login input[type=password] {width: 100px;}
 
+/*Selects*/
+.styled-select select { /*background: transparent;*/ max-width: 200px;  padding: 5px; font-size: 10px; border: 1px solid #ccc; height: 34px;}
 
 
 /* Title for subscribe */
